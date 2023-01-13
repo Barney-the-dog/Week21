@@ -1,9 +1,9 @@
 
 postButton.onclick= function(event){
-    event.preventDefautlt();
+    event.preventDefault();
  
     fetch("https://httpbin.org/post",{
-        method: POST,
+        method: "POST",
         body: new FormData(formElem)
     })
     .then(response => response.json())
